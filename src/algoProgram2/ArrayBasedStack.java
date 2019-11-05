@@ -46,14 +46,15 @@ public class ArrayBasedStack
 	 * @param toBeAdded, the member to be added
 	 */
 	public void push(Integer toBeAdded) 
-	{
-		if (locationOfLast == sizeOfStackArray -1)
+	{	
+		// increment this, very important
+		locationOfLast++;
+		
+		if (locationOfLast == sizeOfStackArray)
 		{
 			doubleArray();
 		}
 		
-		// increment this, very important
-		locationOfLast++;
 		stackArray[locationOfLast] = toBeAdded;
 		System.out.println("Just pushed member " + toBeAdded + " to the stack.");
 	}
