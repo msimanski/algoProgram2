@@ -2,9 +2,9 @@ package algoProgram2;
 
 public class ArrayBasedStack
 {
-	public Integer[] stackArray;
-	public int sizeOfStackArray;
-	public int locationOfLast;
+	private Integer[] stackArray;
+	private int sizeOfStackArray;
+	private int locationOfLast;
 	
 	public ArrayBasedStack() 
 	{
@@ -13,13 +13,13 @@ public class ArrayBasedStack
 		// the default size for this will be 10
 		stackArray = new Integer[sizeOfStackArray];
 		// initialize array to default value of null
-		clearArray();
+		clearStack();
 	}
 	
 	/**
 	 * sets values of entire array to null
 	 */
-	public void clearArray() 
+	public void clearStack() 
 	{
 		for (int i = 0; i < stackArray.length; i++) 
 		{
